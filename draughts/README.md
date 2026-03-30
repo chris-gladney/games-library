@@ -1,16 +1,42 @@
-# React + Vite
+# Chess Board UI (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple React-based chessboard UI that renders an 8×8 grid with correct coordinate mapping and alternating square colours. It is designed as a foundation for building interactive board-based applications such as chess or other grid-based games.
 
-Currently, two official plugins are available:
+> For a broader overview of the technologies used across the full project, see the parent directory README.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Renders an 8×8 grid using CSS Grid
+- Accurate chessboard colour pattern
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Project Structure
+
+```
+src/
+├── components/
+├── App.js            # Main board rendering logic
+├── App.css           # Board and square styling
+└── index.js          # React entry point
+```
+
+---
+
+## 🚀 Getting Started
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm start
+```
+
+The app will be available at `http://localhost:5173`.
