@@ -1,10 +1,11 @@
-function Square({ squareColor, yCoordinate, xCoordinate }) {
-  return (
-    <div className="square" style={{ backgroundColor: squareColor }}>
-        <p>x: {xCoordinate}</p>
-        <p>y: {yCoordinate}</p>
+import { useContext } from "react";
+import { PieceContext } from "./Board";
 
-    </div>
+function Square({ squareColor, yCoordinate, xCoordinate }) {
+  const { draughtPositions, setDraughtPositions } = useContext(PieceContext);
+
+  return (
+    <div className="square" style={{ backgroundColor: squareColor }}></div>
   );
 }
 
