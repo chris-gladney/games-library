@@ -15,22 +15,30 @@ function Board() {
   return (
     <section>
       <div className="board">
-        {squares.map((row, i) => {
-          return row.map((square, j) => {
-            console.log(i.toString() + j.toString(), "<<< key");
-            console.log(j + 1, "<<< yCoordinate");
-            console.log(i + 1, "<<< xCoordinate");
-            return (
-              <>
-                <Square
-                  key={i.toString() + j.toString()}
-                  yCoordinate={j + 1}
-                  xCoordinate={i + 1}
-                />
-              </>
-            );
-          });
-        })}
+        {squares
+          .slice()
+          .reverse()
+          .map((row, y) => {
+            return row.map((square, x) => {
+              console.log(x, "<<< x");
+              console.log(y, "<<< y");
+
+              let squareColor = x + squares.length - y;
+              squareColor % 2 === 0
+                ? (squareColor = "white")
+                : (squareColor = "black");
+              return (
+                <>
+                  <Square
+                    key={x.toString() + y.toString()}
+                    squareColor={squareColor}
+                    yCoordinate={squares.length - y}
+                    xCoordinate={x + 1}
+                  />
+                </>
+              );
+            });
+          })}
       </div>
     </section>
   );
