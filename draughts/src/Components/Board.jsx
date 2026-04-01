@@ -16,14 +16,14 @@ function Board() {
   ];
 
   const [draughtPositions, setDraughtPositions] = useState([
-    [null, "black", null, "black", null, "black", null, "black"],
-    ["black", null, "black", null, "black", null, "black", null],
-    [null, "black", null, "black", null, "black", null, "black"],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    ["white", null, "white", null, "white", null, "white", null],
     [null, "white", null, "white", null, "white", null, "white"],
     ["white", null, "white", null, "white", null, "white", null],
+    [null, "white", null, "white", null, "white", null, "white"],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    ["black", null, "black", null, "black", null, "black", null],
+    [null, "black", null, "black", null, "black", null, "black"],
+    ["black", null, "black", null, "black", null, "black", null],
   ]);
 
   return (
@@ -43,8 +43,8 @@ function Board() {
                   <Square
                     key={`${x}-${y}`}
                     squareColor={squareColor}
-                    yCoordinate={squares.length - y}
-                    xCoordinate={x + 1}
+                    yCoordinate={squares.length - y - 1}
+                    xCoordinate={x}
                   />
                 );
               });
