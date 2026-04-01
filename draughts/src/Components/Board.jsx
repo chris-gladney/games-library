@@ -16,14 +16,14 @@ function Board() {
   ];
 
   const [draughtPositions, setDraughtPositions] = useState([
-    [null, "b", null, "b", null, "b", null, "b"],
-    ["b", null, "b", null, "b", null, "b", null],
-    [null, "b", null, "b", null, "b", null, "b"],
-    [1, 2, 3, 4, 5, 6, 7, 8],
-    [1, 2, 3, 4, 5, 6, 7, 8],
-    ["w", null, "w", null, "w", null, "w", null],
-    [null, "w", null, "w", null, "w", null, "w"],
-    ["w", null, "w", null, "w", null, "w", null],
+    [null, "black", null, "black", null, "black", null, "black"],
+    ["black", null, "black", null, "black", null, "black", null],
+    [null, "black", null, "black", null, "black", null, "black"],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    ["white", null, "white", null, "white", null, "white", null],
+    [null, "white", null, "white", null, "white", null, "white"],
+    ["white", null, "white", null, "white", null, "white", null],
   ]);
 
   return (
